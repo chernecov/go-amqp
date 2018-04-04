@@ -32,3 +32,14 @@ go run consumer.go -exchange=myexchange -queue=myqueue -tag=myconsumer -server=t
 ```
 
 In this case you can see the current amount of consumed messages visiting `http://127.0.0.1:8000`
+
+# Usage
+To see the result publish following json object to appropriate queue.
+
+```json
+{
+    "application": "customer-api",
+    "method": "POST",
+    "resource": "/customer/76"
+}
+```
