@@ -14,11 +14,21 @@ It is almost always better to store configuration inside environment variables:
 
 If this is not possible for you, use passing command line arguments:
 ``` bash
--vhost=my-vhost -user=my-user -password=my-password -port=my-port -host=my-host
+-vhost=myvhost -user=myuser -password=mypassword -port=myport -host=myhost
 ```
 
 # Execution
 To run the consumer enter the directory and hit:
 ```bash
-go run consumer.go -exchange=my-exchange -queue=my-queue -tag=my-consumer
+go run consumer.go -exchange=myexchange -queue=myqueue -tag=myconsumer
 ```
+
+# Server
+You can run http server on 8000 port by adding `-server=true`:
+<br /><br />
+Example:
+```bash
+go run consumer.go -exchange=myexchange -queue=myqueue -tag=myconsumer -server=true
+```
+
+In this case you can see the current amount of consumed messages visiting `http://127.0.0.1:8000`
