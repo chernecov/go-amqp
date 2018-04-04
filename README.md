@@ -3,6 +3,7 @@ AMQP Experiments with GO
 
 # Configuration
 It is almost always better to store configuration inside environment variables:
+
     - RABBITMQ_VIRTUAL_HOST
     - RABBITMQ_USER
     - RABBITMQ_PASSWORD
